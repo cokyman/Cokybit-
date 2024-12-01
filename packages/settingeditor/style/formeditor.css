@@ -1,0 +1,93 @@
+.jp-SettingsFormEditor {
+  display: flex;
+  flex-direction: column;
+}
+
+.jp-SettingsFormEditor form  {
+  display: flex;
+  flex-direction: column-reverse;
+  height: 100%
+}
+
+.jp-SettingsFormEditor div:empty {
+  display: none;
+}
+
+.jp-SettingsFormEditor form > div:not(:last-child) {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.jp-SettingsFormEditor form > div:last-child {
+  flex: 0;
+  padding: calc(var(--jp-ui-font-size1) / 2);
+  border-bottom: 1px solid var(--jp-border-color2);
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.jp-SettingsFormEditor button[type="submit"] {
+  background-image: var(--jp-icon-save);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: var(--jp-layout-color1);
+  min-width: var(--jp-ui-font-size1);
+  min-height: var(--jp-ui-font-size1);
+  max-width: var(--jp-ui-font-size1);
+  max-height: var(--jp-ui-font-size1);
+  color: transparent;
+  display: block;
+  border: 0;
+  flex: 0 1;
+}
+
+.jp-SettingsFormEditor button[type="submit"]:hover {
+  background-color: rgba(167, 182, 194, 0.3);
+}
+
+.jp-SettingsFormEditor .fieldset {
+  border: 0;
+  padding: 0;
+  margin: var(--jp-ui-font-size1);
+  padding-bottom: 0;
+}
+
+.jp-SettingsFormEditor form > div > div > div > .fieldset {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.jp-SettingsFormEditor .fieldset > legend {
+  display: none;
+}
+
+.jp-SettingsFormEditor .fieldset > .form-group {
+  flex: 1;
+  min-width: 30vw;
+  padding: calc(var(--jp-ui-font-size1) / 2);
+}
+
+
+.jp-SettingsFormEditor .field p {
+  color: var(--jp-ui-font-color2);
+  margin: calc(var(--jp-ui-font-size1) / 2) 0;
+}
+
+.jp-SettingsFormEditor .fieldset > p {
+  margin-bottom: var(--jp-ui-font-size1);
+  font-size: var(--jp-ui-font-size2);
+  min-width: 100%;
+}
+
+.jp-SettingsFormEditor .field {
+  margin-bottom: var(--jp-ui-font-size1);
+}
+
+.jp-SettingsFormEditor .field > div > div > label {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: var(--jp-ui-font-size0);
+  margin: 0px;
+}
