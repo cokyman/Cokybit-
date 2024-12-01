@@ -1,0 +1,37 @@
+/*-----------------------------------------------------------------------------
+| Copyright (c) Jupyter Development Team.
+| Distributed under the terms of the Modified BSD License.
+|----------------------------------------------------------------------------*/
+
+button.jp-Button.jp-mod-minimal.jp-TreeView.jp-TreeView,
+button.jp-Button.jp-mod-minimal.jp-TreeView.jp-TableView {
+  display: flex;
+  align-items: center;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  width: 35px;
+}
+
+button.jp-Button.jp-mod-minimal.jp-TreeView:hover {
+  cursor: pointer;
+  background-color: var(--jp-layout-color2);
+}
+
+button.jp-Button.jp-mod-minimal.jp-TableView:hover {
+  cursor: pointer;
+  background-color: var(--jp-layout-color2);
+}
+
+.jp-ViewModeSelected {
+  background-color: var(--jp-layout-color2);
+}
+
+/* Pause on exceptions */
+button.jp-Button.jp-mod-minimal.jp-PauseOnExceptions:hover {
+  cursor: pointer;
+  background-color: var(--jp-layout-color2);
+}
+
+button.jp-Button.jp-PauseOnExceptions.lm-mod-toggled {
+  background-color: var(--jp-layout-color2);
+}
