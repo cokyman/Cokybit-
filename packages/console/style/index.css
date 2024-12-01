@@ -1,0 +1,95 @@
+/*-----------------------------------------------------------------------------
+| Copyright (c) Jupyter Development Team.
+| Distributed under the terms of the Modified BSD License.
+|----------------------------------------------------------------------------*/
+
+
+:root {
+  --jp-private-console-cell-padding: 5px;
+}
+
+
+.jp-ConsolePanel {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  margin-top: -1px;
+  min-width: 240px;
+  min-height: 120px;
+}
+
+
+.jp-ConsolePanel::before {
+    content: '';
+    display: block;
+    height: var(--jp-toolbar-micro-height);
+    background: var(--jp-toolbar-background);
+    border-bottom: 1px solid var(--jp-toolbar-border-color);
+    box-shadow: var(--jp-toolbar-box-shadow);
+    z-index: 1;
+}
+
+
+.jp-CodeConsole {
+  height: 100%;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.jp-CodeConsole-content {
+  background-color: var(--jp-console-background);
+  flex: 1 1 auto;
+  overflow: auto;
+}
+
+
+.jp-CodeConsole-content .jp-Cell.jp-CodeConsole-foreignCell {
+}
+
+
+.jp-CodeConsole-content .jp-Cell.jp-CodeCell.jp-mod-collapsed.jp-mod-readOnly {
+  padding-left: calc(2*var(--jp-private-console-cell-padding))
+}
+
+
+.jp-CodeConsole-input {
+  max-height: 80%;
+  flex: 0 0 auto;
+  overflow: auto;
+  border-top: var(--jp-border-width) solid var(--jp-toolbar-border-color);
+  /* We used to have a bottom padding of 8px that was supposedly related to
+   * our implementation of the 2px margin the the panel to let the shadow in the 
+   * dock panel show. But that doesn't seem to be relevant now, so using the 
+   * matching padding. */
+  padding: var(--jp-private-console-cell-padding);
+  /* This matches the box shadow on the notebook toolbar, eventually we should create
+   * CSS variables for this */
+  box-shadow: 0px 0.4px 6px 0px rgba(0,0,0,0.1);
+}
+
+
+.jp-CodeConsole-content .jp-InputArea-editor.jp-InputArea-editor {
+  border: var(--jp-border-width) solid var(--jp-cell-editor-border-color-active);
+  box-shadow: var(--jp-input-box-shadow);
+  background-color: var(--jp-cell-editor-background-active);
+}
+
+
+.jp-CodeConsole-input .jp-CodeConsole-prompt .jp-InputArea {
+  height: 100%;
+  min-height: 100%;
+}
+
+
+.jp-CodeConsole-content .jp-CodeConsole-banner .jp-InputPrompt {
+  display: none;
+}
+
+
+.jp-CodeConsole-promptCell .jp-InputArea-editor.jp-mod-focused {
+  border: var(--jp-border-width) solid var(--jp-cell-editor-border-color-active);
+  box-shadow: var(--jp-input-box-shadow);
+  background-color: var(--jp-cell-editor-background-active);
+}

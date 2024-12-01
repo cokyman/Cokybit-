@@ -1,0 +1,51 @@
+{
+  "name": "@jupyterlab/rendermime",
+  "version": "0.12.0",
+  "description": "JupyterLab - RenderMime",
+  "homepage": "https://github.com/jupyterlab/jupyterlab",
+  "bugs": {
+    "url": "https://github.com/jupyterlab/jupyterlab/issues"
+  },
+  "license": "BSD-3-Clause",
+  "author": "Project Jupyter",
+  "files": [
+    "lib/*.d.ts",
+    "lib/*.js.map",
+    "lib/*.js",
+    "style/*.css"
+  ],
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "directories": {
+    "lib": "lib/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jupyterlab/jupyterlab.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf lib",
+    "prepublishOnly": "npm run build",
+    "watch": "tsc -w"
+  },
+  "dependencies": {
+    "@jupyterlab/apputils": "^0.12.4",
+    "@jupyterlab/codemirror": "^0.12.0",
+    "@jupyterlab/coreutils": "^0.12.0",
+    "@jupyterlab/rendermime-interfaces": "^0.4.2",
+    "@jupyterlab/services": "^0.51.0",
+    "@phosphor/coreutils": "^1.3.0",
+    "@phosphor/messaging": "^1.2.2",
+    "@phosphor/signaling": "^1.2.2",
+    "@phosphor/widgets": "^1.5.0",
+    "ansi_up": "~1.3.0",
+    "marked": "~0.3.6"
+  },
+  "devDependencies": {
+    "@types/marked": "~0.0.28",
+    "@types/mathjax": "~0.0.31",
+    "rimraf": "~2.6.2",
+    "typescript": "~2.4.2"
+  }
+}

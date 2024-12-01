@@ -1,0 +1,31 @@
+{
+  "name": "@jupyterlab/example-console",
+  "version": "0.12.0",
+  "private": true,
+  "scripts": {
+    "build": "tsc && webpack",
+    "clean": "rimraf build",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@jupyterlab/codemirror": "^0.12.0",
+    "@jupyterlab/console": "^0.12.0",
+    "@jupyterlab/rendermime": "^0.12.0",
+    "@jupyterlab/services": "^0.51.0",
+    "@jupyterlab/theme-light-extension": "^0.12.0",
+    "@phosphor/commands": "^1.4.0",
+    "@phosphor/widgets": "^1.5.0",
+    "es6-promise": "~4.1.1"
+  },
+  "devDependencies": {
+    "@types/codemirror": "~0.0.46",
+    "css-loader": "~0.28.7",
+    "file-loader": "~0.10.1",
+    "rimraf": "~2.6.2",
+    "style-loader": "~0.13.2",
+    "typescript": "~2.4.2",
+    "url-loader": "~0.5.9",
+    "watch": "~1.0.2",
+    "webpack": "~2.7.0"
+  }
+}

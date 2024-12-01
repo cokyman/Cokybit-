@@ -1,0 +1,12 @@
+{
+  "name": "@jupyterlab/mock-mime-extension",
+  "version": "0.2.1",
+  "private": true,
+  "dependencies": {
+    "@phosphor/widgets": "^1.5.0"
+  },
+  "devDependencies": {},
+  "jupyterlab": {
+    "mimeExtension": true
+  }
+}
