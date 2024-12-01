@@ -1,0 +1,73 @@
+{
+  "name": "@jupyterlab/services",
+  "version": "7.0.0-alpha.19",
+  "description": "Client APIs for the Jupyter services REST APIs",
+  "keywords": [
+    "jupyter",
+    "notebook",
+    "services"
+  ],
+  "homepage": "https://github.com/jupyterlab/jupyterlab",
+  "bugs": {
+    "url": "https://github.com/jupyterlab/jupyterlab/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jupyterlab/jupyterlab"
+  },
+  "license": "BSD-3-Clause",
+  "author": "Project Jupyter",
+  "main": "lib/index.js",
+  "browser": {
+    "ws": "./lib/shim/ws.js"
+  },
+  "typings": "lib/index.d.ts",
+  "files": [
+    "lib/**/*.js",
+    "lib/*.js.map",
+    "lib/**/*.d.ts",
+    "lib/**/*.js.map",
+    "lib/*.js",
+    "lib/*.d.ts",
+    "dist/*.js",
+    "dist/**/*.js"
+  ],
+  "scripts": {
+    "build": "tsc -b",
+    "build:all": "npm run build && webpack",
+    "build:test": "tsc --build tsconfig.test.json",
+    "clean": "rimraf lib && rimraf tsconfig.tsbuildinfo",
+    "docs": "typedoc src",
+    "test": "jest -i",
+    "test:cov": "jest -i --collect-coverage",
+    "test:debug": "node --inspect-brk node_modules/.bin/jest --runInBand",
+    "test:debug:watch": "node --inspect-brk node_modules/.bin/jest --runInBand --watch",
+    "watch": "tsc -b --watch"
+  },
+  "dependencies": {
+    "@jupyter/ydoc": "^0.3.1",
+    "@jupyterlab/coreutils": "^6.0.0-alpha.19",
+    "@jupyterlab/nbformat": "^4.0.0-alpha.19",
+    "@jupyterlab/settingregistry": "^4.0.0-alpha.19",
+    "@jupyterlab/statedb": "^4.0.0-alpha.19",
+    "@lumino/coreutils": "^2.0.0-beta.0",
+    "@lumino/disposable": "^2.0.0-beta.1",
+    "@lumino/polling": "^2.0.0-beta.0",
+    "@lumino/properties": "^2.0.0-beta.0",
+    "@lumino/signaling": "^2.0.0-beta.1",
+    "ws": "^8.11.0"
+  },
+  "devDependencies": {
+    "@jupyterlab/testing": "^4.0.0-alpha.19",
+    "@types/jest": "^29.2.0",
+    "@types/ws": "^8.5.3",
+    "rimraf": "~3.0.0",
+    "typedoc": "~0.23.25",
+    "typescript": "~5.0.0-beta",
+    "webpack": "^5.72.0",
+    "webpack-cli": "^5.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
