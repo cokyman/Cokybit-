@@ -1,0 +1,40 @@
+{
+  "extends": "../../tsconfigbase",
+  "compilerOptions": {
+    "outDir": "lib",
+    "rootDir": "src"
+  },
+  "include": ["src/*", "src/default/*"],
+  "references": [
+    {
+      "path": "../apputils"
+    },
+    {
+      "path": "../codeeditor"
+    },
+    {
+      "path": "../console"
+    },
+    {
+      "path": "../coreutils"
+    },
+    {
+      "path": "../docregistry"
+    },
+    {
+      "path": "../fileeditor"
+    },
+    {
+      "path": "../notebook"
+    },
+    {
+      "path": "../services"
+    },
+    {
+      "path": "../statedb"
+    },
+    {
+      "path": "../ui-components"
+    }
+  ]
+}
