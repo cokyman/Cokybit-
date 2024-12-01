@@ -1,0 +1,8 @@
+include package.json
+include LICENSE
+include CONTRIBUTING.md
+include README.md
+
+# Documentation
+graft docs
+exclude docs/\#*
