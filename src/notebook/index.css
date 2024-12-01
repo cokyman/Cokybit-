@@ -1,0 +1,122 @@
+/*-----------------------------------------------------------------------------
+| Copyright (c) 2014-2016, Jupyter Development Team.
+|
+| Distributed under the terms of the Modified BSD License.
+|----------------------------------------------------------------------------*/
+.jp-Notebook-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.p-Widget.jp-NBToolbar {
+  flex: 0 0 auto;
+}
+
+
+.p-Widget.jp-Notebook-container {
+  flex: 1 1 auto;
+}
+
+
+.jp-InputArea {
+  display: flex;
+  flex-direction: row;
+}
+
+
+.jp-InputArea-prompt {
+  flex-grow: 0;
+  flex-shrink: 0;
+  padding-top: 8px !important;
+}
+
+
+.jp-InputArea-editor {
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+
+.jp-MarkdownCell-content.p-Widget {
+  padding: 7px;
+  user-select: text;
+  -moz-user-select: text;
+  -webkit-user-select: text;
+  -ms-user-select: text;
+}
+
+
+.jp-MarkdownCell-content.p-Widget h1 {
+  font-size: 26px;
+  line-height: 1.0;
+  margin: 14px 0 0 0;
+}
+
+
+.jp-MarkdownCell-content.p-Widget h2 {
+  font-size: 22px;
+  line-height: 1.0;
+  margin: 14px 0 0 0;
+}
+
+
+.jp-MarkdownCell-content.p-Widget h3 {
+  font-size: 18px;
+  line-height: 1.0;
+  margin: 14px 0 0 0;
+}
+
+
+.jp-MarkdownCell-content.p-Widget h4 {
+  font-size: 14px;
+  line-height: 1.0;
+  margin: 14px 0 0 0;
+}
+
+
+.jp-MarkdownCell-content.p-Widget h5 {
+  font-size: 14px;
+  font-style: italic;
+  line-height: 1.0;
+  margin: 14px 0 0 0;
+}
+
+
+.jp-MarkdownCell-content.p-Widget h6 {
+  font-size: 14px;
+  font-style: italic;
+  line-height: 1.0;
+  margin: 14px 0 0 0;
+}
+
+
+.jp-MarkdownCell-content.p-Widget p {
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0 0 0 0;
+}
+
+
+.jp-MarkdownCell-content.p-Widget li {
+  line-height: 20px;
+  margin: 14px 0 0 0;
+}
+
+
+.jp-Output-result.p-Widget {
+  user-select: text;
+  -moz-user-select: text;
+  -webkit-user-select: text;
+  -ms-user-select: text;
+}
+
+.jp-Output-result {
+  overflow: auto;
+}
+
+/* If we have two nested output areas (for example, as with output widgets),
+   then the inner output looks weird with a prompt, so we hide it. */
+.jp-Output .jp-Output .jp-Output-prompt {
+  display: none;
+}
