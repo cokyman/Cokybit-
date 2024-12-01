@@ -1,0 +1,14 @@
+name: example-environment
+channels:
+  - conda-forge
+dependencies:
+  - jupyterlab-link-share=0.2
+  - jupyter_server_fileid
+  - jupyter-server-proxy
+  - matplotlib-base
+  - nodejs=18
+  - numpy
+  - pip
+  - python=3.10
+  - vega_datasets
+  - xeus-python
