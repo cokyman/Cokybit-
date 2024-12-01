@@ -1,0 +1,91 @@
+/*-----------------------------------------------------------------------------
+| Copyright (c) Jupyter Development Team.
+| Distributed under the terms of the Modified BSD License.
+|----------------------------------------------------------------------------*/
+.p-CommandPalette {
+  min-width: 300px;
+  padding-bottom: 0px;
+  color: #757575;
+  background: #FAFAFA;
+}
+
+
+.p-CommandPalette-search {
+  margin-bottom: 4px;
+}
+
+
+.p-CommandPalette-inputWrapper {
+  padding: 4px 6px;
+  margin: 4px;
+  background: white;
+  border: 1px solid #E0E0E0;
+  border-radius: 1px;
+}
+
+
+.p-CommandPalette-input {
+  width: 100%;
+  outline: none;
+  border: none;
+  font-size: 13px;
+}
+
+
+.p-CommandPalette-header {
+  margin: 4px 0px;
+  padding: 4px 12px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-bottom: 1px solid #E0E0E0;
+  letter-spacing: 2px;
+}
+
+
+.p-CommandPalette-command {
+  padding: 4px 12px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #757575;
+}
+
+
+.p-CommandPalette-commandCaption {
+  display: none;
+}
+
+
+.p-CommandPalette-header:hover:not(.p-mod-active),
+.p-CommandPalette-command:hover:not(.p-mod-active) {
+  background: #EEEEEE;
+}
+
+
+.p-CommandPalette-header mark {
+  color: #424242;
+  background: inherit;
+}
+
+
+.p-CommandPalette-command.p-mod-active {
+  color: rgba(255,255,255,0.7);
+  background: #2196F3;
+}
+
+
+.p-CommandPalette-command.p-mod-active .p-CommandPalette-commandCaption {
+  color: inherit;
+}
+
+
+.p-CommandPalette-command.p-mod-active mark {
+    background: inherit;
+    color: white;
+}
+
+
+.p-CommandPalette-command mark {
+    background: inherit;
+    color: #757575;
+}
