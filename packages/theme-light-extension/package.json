@@ -1,0 +1,51 @@
+{
+  "name": "@jupyterlab/theme-light-extension",
+  "version": "3.0.0-rc.4",
+  "description": "JupyterLab - Default Light Theme",
+  "homepage": "https://github.com/jupyterlab/jupyterlab",
+  "bugs": {
+    "url": "https://github.com/jupyterlab/jupyterlab/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jupyterlab/jupyterlab.git"
+  },
+  "license": "BSD-3-Clause",
+  "author": "Project Jupyter",
+  "sideEffects": true,
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "style": "style/index.css",
+  "directories": {
+    "lib": "lib/"
+  },
+  "files": [
+    "lib/*.d.ts",
+    "lib/*.js.map",
+    "lib/*.js",
+    "style/**/*.{css,eot,gif,html,jpg,json,png,svg,woff2,ttf}"
+  ],
+  "scripts": {
+    "build": "tsc -b",
+    "clean": "rimraf lib && rimraf tsconfig.tsbuildinfo",
+    "prepublishOnly": "npm run build",
+    "watch": "tsc -b --watch"
+  },
+  "dependencies": {
+    "@jupyterlab/application": "^3.0.0-rc.4",
+    "@jupyterlab/apputils": "^3.0.0-rc.4",
+    "@jupyterlab/translation": "^3.0.0-rc.4"
+  },
+  "devDependencies": {
+    "rimraf": "~3.0.0",
+    "typedoc": "0.17.0-3",
+    "typescript": "~4.0.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "jupyterlab": {
+    "extension": true,
+    "themePath": "style/index.css"
+  }
+}
