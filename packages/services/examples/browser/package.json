@@ -1,0 +1,23 @@
+{
+  "name": "@jupyterlab/example-services-browser",
+  "version": "4.0.2",
+  "private": true,
+  "files": [
+    "lib/*.{d.ts,js,js.map}"
+  ],
+  "scripts": {
+    "build": "tsc && webpack",
+    "clean": "rimraf lib && rimraf tsconfig.tsbuildinfo"
+  },
+  "dependencies": {
+    "@jupyterlab/coreutils": "^6.0.2",
+    "@jupyterlab/services": "^7.0.2",
+    "@lumino/coreutils": "^2.1.1"
+  },
+  "devDependencies": {
+    "rimraf": "~3.0.0",
+    "typescript": "~5.0.4",
+    "webpack": "^5.76.1",
+    "webpack-cli": "^5.0.1"
+  }
+}
