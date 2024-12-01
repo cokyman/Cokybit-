@@ -1,0 +1,53 @@
+{
+  "name": "@jupyterlab/inspector-extension",
+  "version": "1.0.0-alpha.6",
+  "description": "JupyterLab - Code Inspector Extension",
+  "homepage": "https://github.com/jupyterlab/jupyterlab",
+  "bugs": {
+    "url": "https://github.com/jupyterlab/jupyterlab/issues"
+  },
+  "license": "BSD-3-Clause",
+  "author": "Project Jupyter",
+  "files": [
+    "lib/*.d.ts",
+    "lib/*.js.map",
+    "lib/*.js",
+    "schema/*.json"
+  ],
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "directories": {
+    "lib": "lib/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jupyterlab/jupyterlab.git"
+  },
+  "scripts": {
+    "build": "tsc -b",
+    "clean": "rimraf lib",
+    "docs": "typedoc --options tdoptions.json --theme ../../typedoc-theme src",
+    "prepublishOnly": "npm run build",
+    "watch": "tsc -b --watch"
+  },
+  "dependencies": {
+    "@jupyterlab/application": "^1.0.0-alpha.6",
+    "@jupyterlab/apputils": "^1.0.0-alpha.6",
+    "@jupyterlab/console": "^1.0.0-alpha.6",
+    "@jupyterlab/inspector": "^1.0.0-alpha.6",
+    "@jupyterlab/launcher": "^1.0.0-alpha.6",
+    "@jupyterlab/notebook": "^1.0.0-alpha.7"
+  },
+  "devDependencies": {
+    "rimraf": "~2.6.2",
+    "typedoc": "^0.14.2",
+    "typescript": "~3.4.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "jupyterlab": {
+    "extension": true,
+    "schemaDir": "schema"
+  }
+}

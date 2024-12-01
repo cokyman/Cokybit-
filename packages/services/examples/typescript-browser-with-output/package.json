@@ -1,0 +1,24 @@
+{
+  "name": "typescript-browser-with-output",
+  "version": "1.0.0-alpha.6",
+  "private": true,
+  "scripts": {
+    "build": "tsc && webpack",
+    "clean": "rimraf build",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@jupyterlab/outputarea": "^1.0.0-alpha.6",
+    "@jupyterlab/rendermime": "^1.0.0-alpha.6",
+    "@jupyterlab/services": "^4.0.0-alpha.6",
+    "es6-promise": "~4.1.1"
+  },
+  "devDependencies": {
+    "css-loader": "~2.1.1",
+    "rimraf": "~2.6.2",
+    "style-loader": "~0.23.1",
+    "typescript": "~3.4.3",
+    "webpack": "~4.29.6",
+    "webpack-cli": "^3.3.0"
+  }
+}
