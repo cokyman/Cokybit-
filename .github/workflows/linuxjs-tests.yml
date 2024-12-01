@@ -1,0 +1,82 @@
+name: Linux JS Tests
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+  release:
+    types: [published]
+
+jobs:
+  linuxjs:
+    name: JS
+    strategy:
+      matrix:
+        # Fix for https://github.com/jupyterlab/jupyterlab/issues/13903
+        include:
+          - group: js-debugger
+            python-version: '3.11'
+        group:
+          [
+            js-application,
+            js-apputils,
+            js-cell-toolbar,
+            js-cells,
+            js-codeeditor,
+            js-codemirror,
+            js-completer,
+            js-console,
+            js-coreutils,
+            js-csvviewer,
+            js-debugger,
+            js-docmanager,
+            js-docprovider,
+            js-docregistry,
+            js-documentsearch,
+            js-filebrowser,
+            js-fileeditor,
+            js-imageviewer,
+            js-inspector,
+            js-logconsole,
+            js-lsp,
+            js-mainmenu,
+            js-metadataform,
+            js-metapackage,
+            js-nbformat,
+            js-notebook,
+            js-observables,
+            js-outputarea,
+            js-rendermime,
+            js-services,
+            js-settingregistry,
+            js-statedb,
+            js-statusbar,
+            js-testing,
+            js-terminal,
+            js-toc,
+            js-translation,
+            js-ui-components,
+            js-vega5-extension,
+          ]
+      fail-fast: false
+    runs-on: ubuntu-22.04
+    timeout-minutes: 40
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Base Setup
+        uses: jupyterlab/maintainer-tools/.github/actions/base-setup@v1
+
+      - name: Install dependencies
+        env:
+          GROUP: ${{ matrix.group }}
+        run: |
+          bash ./scripts/ci_install.sh
+
+      - name: Run test ${{ matrix.group }}
+        env:
+          GROUP: ${{ matrix.group }}
+        run: |
+          bash ./scripts/ci_script.sh
