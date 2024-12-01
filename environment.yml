@@ -1,0 +1,9 @@
+name: jupyterlab
+channels:
+  - nodefaults
+  - conda-forge
+dependencies:
+  - jupyterlab
+  - ipywidgets
+  - pandas
+  - nodejs
