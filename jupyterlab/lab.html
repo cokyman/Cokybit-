@@ -1,0 +1,59 @@
+<!--
+Copyright (c) Jupyter Development Team.
+Distributed under the terms of the Modified BSD License.
+-->
+
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+
+  <title>{% block title %}{{page_title}}{% endblock %}</title>
+
+  {% block stylesheet %}
+    {% for css_file in jupyterlab_css %}
+      <link href="{{ css_file }}" rel="stylesheet">
+    {% endfor %}
+  {% endblock %}
+
+  <script id='jupyter-config-data' type="application/json">{
+  "baseUrl": "{{base_url | urlencode}}",
+  "wsUrl": "{{ws_url| urlencode}}",
+  "notebookPath": "{{notebook_path | urlencode}}"
+  }</script>
+
+  {% block favicon %}<link rel="shortcut icon" type="image/x-icon" href="/static/base/images/favicon.ico">{% endblock %}
+
+  {% for bundle_file in jupyterlab_bundles %}
+  <script src="{{ bundle_file }}" type="text/javascript" charset="utf-8"></script>
+  {% endfor %}
+
+  {% if mathjax_url %}
+  <script type="text/javascript" src="{{mathjax_url}}?config={{mathjax_config}}&amp;delayStartupUntil=configured" charset="utf-8"></script>
+  {% endif %}
+
+  {% block meta %}
+  {% endblock %}
+
+</head>
+
+<body>
+
+{% block script %}
+<script>
+  var lab = jupyter.require("{{ jupyterlab_main }}");
+  var plugins = [];
+
+  {% for plugin_entry in plugin_entries %}
+  plugins = plugins.concat(jupyter.getEntryPoint("{{ plugin_entry }}"));
+  {% endfor %}
+
+  lab.registerPlugins(plugins);
+  lab.start();
+</script>
+{% endblock %}
+
+</body>
+
+</html>
