@@ -1,0 +1,32 @@
+**/build
+**/node_modules
+**/lib
+**/package.json
+**/static
+tests/**/coverage
+
+.eggs
+dev_mode/index.js
+dev_mode/schemas
+dev_mode/static
+dev_mode/themes
+dev_mode/workspaces
+docs/_build
+docs/api
+examples/app/build
+examples/app/themes
+examples/app/schemas
+jupyterlab/schemas
+jupyterlab/themes
+jupyterlab/geckodriver
+jupyterlab/staging/yarn.js
+jupyterlab/staging/index.js
+packages/ui-components/src/icon/iconimports.ts
+packages/extensionmanager/examples/listings
+
+# jetbrains IDE stuff
+.idea/
+
+# ms IDE stuff
+.history/
+.vscode/
