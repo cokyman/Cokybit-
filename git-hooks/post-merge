@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo "rebuilding extension"
+(yarn && yarn build:main) || echo "fail to rebuild javascript"
