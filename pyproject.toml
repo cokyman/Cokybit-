@@ -89,7 +89,7 @@ docs-screenshots = [
     "ipywidgets==8.1.0",
     "jupyterlab-geojson==3.4.0",
     "jupyterlab-language-pack-zh-CN==4.0.post1",
-    "matplotlib==3.7.2",
+    "matplotlib==3.10.0",
     "nbconvert>=7.0.0",
     "pandas==2.0.3",
     "scipy==1.11.1",
